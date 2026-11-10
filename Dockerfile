@@ -9,7 +9,6 @@ FROM eclipse-temurin:21-jdk-alpine AS build
 WORKDIR /app
 
 # Copy Maven wrapper first (better layer caching)
-COPY .mvn/  .mvn/
 COPY mvnw   pom.xml ./
 RUN chmod +x ./mvnw
 
